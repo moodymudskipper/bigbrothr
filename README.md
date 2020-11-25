@@ -9,8 +9,8 @@ maintainers.
 It is only an idea, no data is sent anywhere at the moment.
 
 {bigbrothr} should respect safety, privacy, transparency, and
-performance, be painless to the user and easy of user for the
-maintainer, in that order.
+performance, be painless to the user and easy to use for the maintainer,
+in that order.
 
 I’m no specialist in either of those areas (at all), barely a curious
 explorer.
@@ -27,17 +27,17 @@ remotes::install_github("moodymudskipper/bigbrothr")
 
 calls to *{bigbrothr}* functions update global variables in
 *{bigbrothr}*’s namespace, when the user quits the session or restarts
-it, this data is uploaded to an online database.
+it, this data is uploaded to a now inexistent online database.
 
 ## opting in our out
 
 *{bigbrothr}* is 100% opt in.
 
-A package that uses *{bigbrother}* will load its namespace, which will
+A package that uses *{bigbrothr}* will load its namespace, which will
 trigger a message informing that they can: can : \* opt in by setting
-`option(bigbrother.optin = TRUE)` \* opt out for the session by doing
+`option(bigbrothr.optin = TRUE)` \* opt out for the session by doing
 nothing \* opt out forever and hide future such startup messages by
-setting `option(bigbrother.optin = FALSE)` in their RPRofile
+setting `option(bigbrothr.optin = FALSE)` in their RPRofile
 
 This is the only annoyance an opt out user will face.
 
@@ -50,7 +50,7 @@ connection is detected :
   - The user is asked if it’s ok to send the data
   - They’re offered to inspect the data
   - They’re informed they could have disabled this prompt for the
-    session by setting `option(bigbrother.prompt = FALSE)` and that they
+    session by setting `option(bigbrothr.prompt = FALSE)` and that they
     can disable it forever by adding it to their RProfile.
   - if they accept their data is uploaded.
 
@@ -109,4 +109,10 @@ Now let’s use it :
 ![](inst/Capture.PNG)
 
 This example package can be installed using
-`remotes::install_github("moodymudskipper/bigbrother.example")`
+`remotes::install_github("moodymudskipper/bigbrothr.example")`
+
+## caveat
+
+works only if the session is left using `q()` or `quit()`. Most users
+probably quit their session by closing RStudio of restarting the session
+from there, which doesn’t work. There might be a way around it.

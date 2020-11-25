@@ -42,12 +42,12 @@ inexistent online database.
 
 *{bigbrothr}* is 100% opt in.
 
-A package that uses *{bigbrother}* will load its namespace, which will trigger a
+A package that uses *{bigbrothr}* will load its namespace, which will trigger a
 message informing that they can:
 can :
-* opt in by setting `option(bigbrother.optin = TRUE)`
+* opt in by setting `option(bigbrothr.optin = TRUE)`
 * opt out for the session by doing nothing
-* opt out forever and hide future such startup messages by setting `option(bigbrother.optin = FALSE)` in their RPRofile
+* opt out forever and hide future such startup messages by setting `option(bigbrothr.optin = FALSE)` in their RPRofile
 
 This is the only annoyance an opt out user will face.
 
@@ -57,7 +57,7 @@ If the user opts in, when exiting the session and if an internet connection is d
 
 * The user is asked if it's ok to send the data
 * They're offered to inspect the data
-* They're informed they could have disabled this prompt for the session by setting `option(bigbrother.prompt = FALSE)` and that they can disable it forever by adding it to their RProfile. 
+* They're informed they could have disabled this prompt for the session by setting `option(bigbrothr.prompt = FALSE)` and that they can disable it forever by adding it to their RProfile. 
 * if they accept their data is uploaded. 
 
 ## Safety, privacy, transparency
@@ -110,7 +110,7 @@ Now let's use it :
 ![](inst/Capture.PNG)
 
 This example package can be installed using
-`remotes::install_github("moodymudskipper/bigbrother.example")`
+`remotes::install_github("moodymudskipper/bigbrothr.example")`
 
 ## caveat
 
