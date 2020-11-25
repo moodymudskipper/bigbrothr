@@ -3,12 +3,13 @@
 
 # bigbrothr
 
-{bigbrothr} is an experiment on how we might provide feedback to package
-maintainers.
+*{bigbrothr}* is an experiment on how we might provide automted feedback
+to package maintainers on the usage of their package, without bothering
+or worrying users nor violating their safety and privacy.
 
 It is only an idea, no data is sent anywhere at the moment.
 
-{bigbrothr} should respect safety, privacy, transparency, and
+*{bigbrothr}* should respect safety, privacy, transparency, and
 performance, be painless to the user and easy to use for the maintainer,
 in that order.
 
@@ -34,10 +35,12 @@ it, this data is uploaded to a now inexistent online database.
 *{bigbrothr}* is 100% opt in.
 
 A package that uses *{bigbrothr}* will load its namespace, which will
-trigger a message informing that they can: can : \* opt in by setting
-`option(bigbrothr.optin = TRUE)` \* opt out for the session by doing
-nothing \* opt out forever and hide future such startup messages by
-setting `option(bigbrothr.optin = FALSE)` in their RPRofile
+trigger a message informing that they can: can :
+
+  - opt in by setting `option(bigbrothr.optin = TRUE)`
+  - opt out for the session by doing nothing
+  - opt out forever and hide future such startup messages by setting
+    `option(bigbrothr.optin = FALSE)` in their RPRofile
 
 This is the only annoyance an opt out user will face.
 
@@ -58,7 +61,8 @@ connection is detected :
 
 No data is kept anywhere between sessions.
 
-{bigbrothr} :doesn’t log any sensitive information, it logs things like:
+*{bigbrothr}* :doesn’t log any sensitive information, it logs things
+like:
 
   - counts of calls to its functions
   - passes, with timestamps
